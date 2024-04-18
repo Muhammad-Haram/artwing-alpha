@@ -1,0 +1,1030 @@
+@font-face {
+    font-family: clashDisplay;
+    src: url('ClashDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: clashDisplay;
+    src: url('ClashDisplay-Semibold.ttf');
+}
+
+/* font-family: "Plus Jakarta Sans", sans-serif;  */
+/* font-family: clashDisplay; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #060606;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-bt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* cursor */
+
+.cursor {
+    background-color: #FCE383;
+    position: fixed;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    z-index: 1000;
+    transform-origin: center center;
+    pointer-events: none;
+    transition: transform .3s ease;
+    background-position: center;
+    background-size: cover;
+    transition: background-image ease 0.5s;
+    transition: all linear 0.06s;
+}
+
+.color {
+    background-color: #fce48383;
+    transform: scale(2.5);
+}
+
+/* loader  */
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.yellow {
+    width: 100%;
+    height: 100%;
+    background-color: #FCE383;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yellow img {
+    width: 15%;
+}
+
+/* nav-info  */
+
+.nav-info {
+    width: 100%;
+    height: 100vh;
+    background-color: #060606;
+    position: fixed;
+    top: -100%;
+    transition: 0.3s;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+}
+
+.show {
+    top: 0px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 30px 50px;
+}
+
+.nav-content .nav-list h2 {
+    font-size: 55px;
+    color: rgb(255, 255, 255);
+    font-family: clashDisplay;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.nav-content .nav-list .text-color {
+    color: #FCE383;
+}
+
+.nav-contact .address h3,
+.nav-contact .links h3 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nav-contact .address span {
+    color: #FCE383;
+}
+
+.nav-contact .address>*,
+.nav-contact .links>* {
+    margin-bottom: 20px;
+}
+
+.nav-contact .address p {
+    font-size: 16px;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.nav-contact .links ul {
+    display: flex;
+}
+
+.nav-contact .links ul li {
+    list-style: none;
+}
+
+.nav-contact .links ul li {
+    font-size: 27px;
+    color: #1d1c1c;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.nav-contact .links ul li:nth-child(1):hover {
+    color: white;
+    background-color: #3b5999;
+}
+
+.nav-contact .links ul li:nth-child(2):hover {
+    color: white;
+    background-color: #000;
+
+}
+
+.nav-contact .links ul li:nth-child(3):hover {
+    background-color: rgb(10, 88, 202);
+    color: white;
+}
+
+.nav-contact .links ul li:nth-child(4):hover {
+    background-color: #dd4b39;
+    color: white;
+}
+
+.nav-contact .links a,
+#footer .footer-sec a {
+    color: #FCE383;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* header */
+#header {
+    background-color: #060606;
+}
+
+.nav,
+.nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.logo img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav-close .menu img {
+    filter: invert(1);
+}
+
+.menu {
+    background-color: #FCE383;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* banner section */
+
+#hero-banner {
+    background-color: #060606;
+}
+
+.hero {
+    padding: 70px 40px 10px 40px;
+}
+
+.hero .text {
+    color: #fff;
+    gap: 25px;
+}
+
+.hero .text>* {
+    margin-bottom: 30px;
+}
+
+.hero .text span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: flex;
+}
+
+.hero .text p {
+    width: 60%;
+    font-size: 23px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.hero .text h2 {
+    font-size: 70px;
+    font-family: clashDisplay;
+    font-weight: 600;
+}
+
+.hero .text h1 {
+    color: rgb(254, 227, 129);
+    font-size: 90px;
+    font-weight: 500;
+    font-family: clashDisplay;
+}
+
+/* banner round box */
+
+@keyframes rotating {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.round-box {
+    position: relative;
+}
+
+.round-text {
+    width: 100%;
+    max-width: 185px;
+    height: 185px;
+    margin: 0 auto;
+    padding: 6px;
+    text-transform: uppercase;
+    background: #fde383;
+    border-radius: 50%;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.rotating {
+    animation: 12s linear infinite rotating;
+}
+
+.arrow {
+    position: absolute;
+    top: 50px;
+    left: 110px;
+}
+
+/* marquee / slider  */
+
+.elem {
+    width: 99.9%;
+    position: relative;
+    transform: rotateZ(-3deg);
+    margin-top: 250px;
+    margin-bottom: 150px;
+}
+
+.elem .moving {
+    background-color: white;
+    width: 100%;
+    white-space: nowrap;
+    padding: 8px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) scaleY(1);
+    cursor: pointer;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+.elem .moving .move-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: move;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.elem .moving .move-in h5 {
+    color: #000;
+    display: inline-block;
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-right: 35px;
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+    font-family: clashDisplay;
+}
+
+
+@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+/* about section  */
+
+#about-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 500px 0px 60px 0px;
+    gap: 50px;
+    padding: 0 60px;
+}
+
+.about-img {
+    width: 45%;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-content>* {
+    margin-bottom: 20px;
+}
+
+.about-content {
+    width: 55%;
+}
+
+.about-content h1 {
+    font-size: 70px;
+    color: white;
+    font-family: clashDisplay;
+}
+
+.about-content span {
+    color: #FCE383;
+}
+
+.about-content p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: rgb(204, 204, 204);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.about-content .button {
+    background-color: #FCE383;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    max-width: 220px;
+}
+
+.about-content .button p {
+    color: black;
+    font-weight: 400;
+    font-family: clashDisplay;
+    font-size: 14px;
+}
+
+.about-content .button img {
+    width: 22px;
+    height: 22px;
+}
+
+/* services section  */
+
+#services .container .ser-text,
+#portfolio .por-text {
+    margin: 30px 0;
+    text-align: center;
+}
+
+#services .container .ser-text p,
+#portfolio .por-text p,
+.accordion .accordion-heading p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#services .container .ser-text h1,
+#portfolio .por-text h1,
+.accordion .accordion-heading h1 {
+    font-size: 50px;
+    color: white;
+    font-family: clashDisplay;
+    width: 60%;
+    margin: 0px auto;
+}
+
+#services .container .ser-text span,
+#portfolio .por-text span,
+.accordion .accordion-heading span {
+    color: #FCE383;
+}
+
+#services .container .ser-box {
+    width: 100%;
+    display: flex;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #343434;
+}
+
+#services .container .ser-box .ser-box-text {
+    width: 35%;
+    padding: 50px;
+    gap: 100px;
+}
+
+#services .container .ser-box .ser-box-text:nth-child(3) {
+    width: 30%;
+}
+
+#services .container .ser-box .ser-box-text h2 {
+    font-family: clashDisplay;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#services .container .ser-box .ser-box-text span {
+    -webkit-text-stroke: 1px #686868;
+    font-size: 55px;
+    font-weight: 900;
+    color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+#services .container .ser-box .ser-box-text span:nth-child(1) {
+    font-family: clashDisplay;
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-text-stroke: 0px;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+#services .container .ser-box .ser-box-text p,
+ul li {
+    font-size: 14px;
+    color: #b6b6b6;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#services .container .ser-box .ser-box-text i {
+    margin-right: 20px;
+    font-size: 17px;
+    color: #b6b6b6;
+}
+
+/* portfolio section  */
+
+#portfolio {
+    margin-bottom: 100px;
+}
+
+#portfolio .por-container {
+    width: 100%;
+}
+
+#portfolio .por-container .por-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#portfolio .por-container .por-sub:nth-child(1) {
+    border-bottom: 1px solid #686868;
+}
+
+#portfolio .por-container .por-sub .por-img {
+    width: 50%;
+    padding: 50px;
+}
+
+#portfolio .por-container .por-sub .por-img>* {
+    margin-bottom: 30px;
+}
+
+#portfolio .por-container .por-sub .por-img img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#portfolio .por-container .por-sub .por-img img:hover {
+    transform: scale(1.1);
+}
+
+#portfolio .por-container .por-sub .por-img p {
+    color: #FCE383;
+    border: 1px solid #FCE383;
+    padding: 10px 10px;
+    background-color: #060606;
+    border-radius: 50px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+}
+
+#portfolio .por-container .por-sub .por-img h2 {
+    color: white;
+    font-size: 26px;
+    font-family: clashDisplay;
+}
+
+/* accordian section  */
+
+.accordion {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 110vh;
+    /* background-color: #FCE383; */
+}
+
+.accordion-item {
+    margin: 20px;
+    border-radius: 20px;
+    background-color: #1c1c1c;
+}
+
+.accordion-title {
+    color: #fff;
+    background-color: #1c1c1c;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 1s;
+    font-size: 25px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-title i {
+    font-size: 25px;
+    color: #FCE383;
+    transition: all 0.5s;
+}
+
+.accordion-title:hover i {
+    transform: rotate(-180deg);
+}
+
+.accordion-content {
+    background-color: #1c1c1c;
+    display: none;
+    padding: 10px;
+    font-size: 16px;
+    padding: 10px 30px 30px 30px;
+    color: white;
+    border-radius: 20px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-content a {
+    margin-left: 20px;
+}
+
+.accordion .accordion-heading {
+    margin: 60px 0px;
+}
+
+/* button css  */
+
+#drop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 30px;
+}
+
+#drop .drop-text h1 {
+    font-size: 75px;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    transition: all 0.5s;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+#drop .drop-text h1:hover {
+    color: #FCE383;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    line-height: 46px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    font-size: 16px;
+    font-family: arial;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: all .35s;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.wrapper a:before,
+.wrapper a:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: #FCE383;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.wrapper a:before {
+    opacity: .5;
+}
+
+.wrapper a:after {
+    transition-delay: .2s;
+}
+
+a:hover:before,
+a:hover:after {
+    top: 0;
+}
+
+.wrapper a:hover {
+    color: black;
+    transition: all 0.5s;
+    border: 1px solid #FCE383;
+}
+
+.wrapper i {
+    margin-left: 10px;
+}
+
+/* footer css  */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 70px;
+}
+
+#footer .footer-sec {
+    color: white;
+    width: 25%;
+}
+
+#footer .footer-sec:nth-child(1) {
+    width: 15%;
+}
+
+#footer .footer-sec h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#footer .footer-sec .map-img {
+    width: 100%;
+}
+
+#footer .footer-sec .map-img svg {
+    width: 100%;
+}
+
+#footer .footer-sec ul li {
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#footer .footer-sec i {
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+
+@media (max-width: 440px) {
+
+    .yellow {
+        height: 100%;
+    }
+
+    .yellow img {
+        width: 30%;
+    }
+
+    .nav,
+    .nav-close {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .nav-close {
+        width: 80%;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        padding: 15px 15px;
+        width: 100%;
+    }
+
+    .nav-content .nav-list {
+        width: 100%;
+    }
+
+    .nav-content .nav-list h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav-contact {
+        width: 100%;
+    }
+
+    .nav-contact .address h3,
+    .nav-contact .links h3 {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .nav-contact .address {
+        width: 80%;
+    }
+
+    .nav-contact .address>*,
+    .nav-contact .links>* {
+        margin-bottom: 10px;
+    }
+
+    .nav-contact .address p {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero .text h2 {
+        font-size: 45px;
+    }
+
+    .hero .text h1 {
+        font-size: 55px;
+    }
+
+    .hero .text p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .round-text {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .arrow {
+        top: 35px;
+        left: 95px;
+    }
+
+    .elem {
+        margin-top: 220px;
+        margin-bottom: 0px;
+    }
+
+    .elem .moving .move-in h5 {
+        font-size: 25px;
+    }
+
+    #about-section {
+        flex-direction: column;
+        margin: 0px 0px;
+        margin-top: 350px;
+        gap: 50px;
+        padding: 0 15px;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h1 {
+        font-size: 40px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    #services .container .ser-text h1,
+    #portfolio .por-text h1,
+    .accordion .accordion-heading h1 {
+        font-size: 30px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #services .container .ser-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        display: flex;
+        align-items: start;
+        border-top: 1px solid #343434;
+    }
+
+    #services .container .ser-box .ser-box-text {
+        width: 100%;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    #services .container .ser-box .ser-box-text:nth-child(3) {
+        width: 100%;
+    }
+
+    #services .container .ser-box .ser-box-text h2 {
+        margin-bottom: 10px;
+    }
+
+    #services .container .ser-box .ser-box-text p,
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    #portfolio {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    #portfolio .por-container .por-sub {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #portfolio .por-container .por-sub .por-img {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #portfolio .por-container .por-sub .por-img p {
+        width: 100%;
+    }
+
+    .accordion {
+        height: 100vh;
+        /* background-color: #FCE383; */
+    }
+
+    .accordion-item {
+        margin: 15px;
+        border-radius: 20px;
+        background-color: #1c1c1c;
+    }
+
+    .accordion-title {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        ;
+    }
+
+    #drop {
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        margin: 15px 15px;
+    }
+
+    .wrapper a {
+        width: 150px;
+        height: 150px;
+        font-size: 14px;
+    }
+
+    #footer {
+        /* flex-direction: column; */
+        padding: 20px 20px;
+        flex-wrap: wrap;
+    }
+
+    #footer .footer-sec h2 {
+        font-size: 20px;
+    }
+
+    #footer .footer-sec ul li {
+        font-size: 14px;
+    }
+
+    #footer .footer-sec {
+        width: 50%;
+    }
+
+    #footer .footer-sec:nth-child(1) {
+        width: 50%;
+    }
+
+    #footer .footer-sec:nth-child(2) {
+        width: 100%;
+    }
+
+    #footer .footer-sec i {
+        margin-right: 15px;
+        font-size: 15px;
+    }
+}
